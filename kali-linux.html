@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hacking Simulator</title>
+  
+</head>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Base Mobile Styles ===== */
+body {
+  font-family: monospace;
+  color: #67db85;
+  padding: 40px 20px;
+  margin-top: 200px;
+  background-image: url('ChatGPT Image Jun 19, 2025, 10_53_40 AM.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.terminal {
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 15px;
+  background-color: red;
+  color: rgb(190, 255, 116);
+  max-width: 100%;
+  width: 100%;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  animation: R 10s 5s infinite reverse;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+@keyframes R {
+  0% { color: red; opacity: 1; }
+  15% { color: darkblue; opacity: 0; }
+  30% { color: black; opacity: 1; }
+  45% { color: darkblue; opacity: 0; }
+  60% { color: purple; opacity: 1; }
+  75% { color: green; opacity: 0; }
+}
+
+p {
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1rem;
+}
+
+.blink {
+  animation: blink 1s infinite;
+  color: transparent;
+}
+
+@keyframes blink {
+  50% {
+    color: #67db85;
+  }
+}
+
+.Raja {
+  font-style: italic;
+  font-size: 1rem;
+}
+
+/* ===== Tablet (≥600px) ===== */
+@media (min-width: 600px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .Raja {
+    font-size: 1.2rem;
+  }
+
+  .terminal {
+    padding: 25px;
+  }
+
+  body {
+    padding: 60px;
+    margin-top: 400px;
+  }
+}
+
+/* ===== Desktop (≥900px) ===== */
+@media (min-width: 900px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .Raja {
+    font-size: 1.3rem;
+  }
+
+  .terminal {
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  body {
+    margin-top: 600px;
+    padding: 90px;
+  }
+}
+
+</style>
+<body>
+
+  <div class="terminal">
+    <p class="heading">Kali Linux Terminal By <span class="Raja"><i><b>RAJA</i></b></span></p>
+
+    <p id="line1"></p>
+    <p id="line2"></p>
+    <p id="line3"></p>
+    <p id="line4"></p>
+    <p id="line5"></p>
+    <p id="line6"></p>
+    <p id="line7"></p>
+    <p id="line8"></p>
+    <p id="line9"></p>
+  </div>
+  <script>
+   
+const messages = [
+    "[•] Initializing PHP server at localhost:8080",
+    "[+] PHP Server has started successfully!",
+    "[•] Initializing tunnelers at same address",
+    "[+] Waiting for login info....Press Ctrl+C to exit",
+    "> Reading your Files",
+    "> Password files Detected",
+    "> Sending all passwords and personal files to server",
+    "> Cleaning up",
+    "Haha you got hecked sucessfully!!!"
+];
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function typeWriter() {
+    for (let i = 0; i < messages.length; i++) {
+        const line = document.getElementById(`line${i + 1}`);
+        line.innerHTML = "";
+        for (let j = 0; j < messages[i].length; j++) {
+            line.innerHTML += messages[i][j];
+            await sleep(30);
+        }
+        if (i < messages.length - 1) {
+            line.innerHTML += '<span class="blink">.💀.</span>';
+            await sleep(55);
+        }
+        await sleep(getRandomDelay(500, 3000));
+    }
+}
+
+function getRandomDelay(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+typeWriter();
+ 
+  </script>
+</body>
+
+</html>
