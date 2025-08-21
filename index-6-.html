@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hacker Zone</title>
+  <link rel="stylesheet" href="index-6-.css" />
+</head>
+<style>
+  /* ===== Base Styles (Mobile First) ===== */
+body {
+  background-color: #000;
+  color: #0f0;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px #0f0;
+}
+
+.card {
+  margin-bottom: 25px;
+}
+
+.card img {
+  width: 90%;
+  max-width: 300px;
+  border: 3px solid #000;
+  box-shadow: 0 0 20px;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+  animation: Rj 10s 5s infinite reverse;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+}
+
+.card p {
+  font-size: 1rem;
+  margin-top: 10px;
+  text-shadow: 0 0 5px #0f0;
+  animation: R 10s 5s infinite reverse;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.nav-links a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #8a2be2;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ===== Animations ===== */
+@keyframes R {
+  0%   { color: white; opacity: 1; }
+  15%  { color: darkblue; opacity: 0; }
+  30%  { color: red; opacity: 1; }
+  45%  { color: darkblue; opacity: 0; }
+  60%  { color: magenta; opacity: 1; }
+  75%  { color: green; opacity: 0; }
+}
+
+@keyframes Rj {
+  0%   { box-shadow: 0 0 20px white; opacity: 1; }
+  15%  { box-shadow: 0 0 20px #e2e2ed; opacity: 0; }
+  30%  { box-shadow: 0 0 20px red; opacity: 1; }
+  45%  { box-shadow: 0 0 20px #d7d7e1; opacity: 0; }
+  60%  { box-shadow: 0 0 20px magenta; opacity: 1; }
+  75%  { box-shadow: 0 0 20px green; opacity: 0; }
+}
+
+/* ===== Tablet and Desktop Styles ===== */
+@media (min-width: 600px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .card p {
+    font-size: 1.3rem;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .card img {
+    width: 300px;
+  }
+
+  .card p {
+    font-size: 1.5rem;
+  }
+}
+
+</style>
+<body>
+  <div class="nav-link">
+  <a href="index-6.html"></a>
+</div>
+  <div class="container">
+    <h1 class="title">Friends Zone<<<<<<< </h1>
+
+    <div class="card">
+      <a href="https://wa.me/923349005966" target="_blank">
+        <img src="sychoo.png" alt="Sychoo" />
+        
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="https://wa.me/923144353501" target="_blank">
+        <img src="hadii.png" alt="Hadii" />
+        
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="https://wa.me/923345551543" target="_blank">
+        <img src="raja.png" alt="Raja" />
+        
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="https://wa.me/923298383168" target="_blank">
+        <img src="anjaan.png" alt="Anjaan" />
+        
+      </a>
+    </div>
+  </div>
+</body>
+</html>
